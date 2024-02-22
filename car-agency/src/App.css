@@ -27,7 +27,7 @@ section{
   display: flex;
   padding: 50px 10px;
   margin: 0;
-  flex-direction: 
+  flex-direction:column 
   
   ;
   row-gap: 30px;
@@ -185,6 +185,7 @@ option{
 .nav-bar {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .nav-bar-item {
   list-style: none;

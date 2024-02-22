@@ -10,7 +10,7 @@ export default function Auth() {
     {
       type: "text",
       title: "Имя пользователя",
-      name: "username",
+      name: "usernameOrEmail",
     },
     {
       type: "text",
@@ -29,11 +29,11 @@ export default function Auth() {
     const auth = authRef.current;
     const authData = new FormData(auth);
     const data = {
-      username: authData.get("username"),
+      usernameOrEmail: authData.get("usernameOrEmail"),
       password: authData.get("password"),
     };
 
-    sendRequest("https://job.alidi.ru/api/auth/login", data)
+    sendRequest("", data)
       .then((r) => {
         setErrors(false);
         setSuccess(true)

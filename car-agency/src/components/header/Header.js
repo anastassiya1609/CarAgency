@@ -47,6 +47,7 @@ export default function Header(props) {
     });
   }, []);
 
+  console.log( process.env.BACKEND_URL)
   return (
      
       <header id="header" className={headerClass}>
@@ -76,8 +77,12 @@ export default function Header(props) {
               </li>
             </div>
           ))}
+          <div>
+                <img className="icon" src="images\icons\verified-account.png" alt="аккаунт"></img>
+                
+              </div>
         </ul>
-        
+       
         <div
           className={
             "toggle-menu-button " +
@@ -89,6 +94,8 @@ export default function Header(props) {
           <div className="line line2"></div>
           <div className="line line3"></div>
         </div>
+        
+       
 
         {isShowedMenu && (
           <nav className={"nav__mobile"}>
